@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Chango&display=swap");
 
 .hero-section {
   position: relative;
@@ -232,12 +232,14 @@
 
 .hero-you {
   position: absolute;
-  left:350px;
+  left: 350px;
   top: 78px;
   color: #f2f2f2;
-  font-size: 112px;
+  font-size: 92px;
   line-height: 0.9;
   font-weight: 900;
+  font-family: "Chango", cursive;
+  letter-spacing: 1px;
   text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.14);
 }
 
@@ -251,21 +253,24 @@
 
 .hero-fit {
   position: absolute;
-  left: 65px;
+  left: 55px;
   top: 28px;
   color: #f2f2f2;
-  font-size: clamp(70px, 8vw, 110px);
+  font-size: clamp(58px, 8vw, 110px);
   line-height: 0.9;
-  font-weight: 900;
+  font-weight: 800;
+  font-family: "Chango", cursive;
+  letter-spacing: 1px;
   text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.14);
 }
 
 .hero-ness {
   position: absolute;
-  left: 250px;
+  left: 280px;
   top: -35px;
   width: 320px;
   display: block;
+  z-index: 20;
 }
 
 .hero-into-shape {
@@ -402,6 +407,8 @@
   .hero-rings {
     width: 680px;
     height: 680px;
+    left: 52%;
+    top: 56%;
   }
 
   .ring-fade {
@@ -435,49 +442,62 @@
     top: 59%;
   }
 
+  .hero-text-area {
+    top: 55%;
+  }
+
   .hero-transform {
     left: 90px;
     top: 8px;
     font-size: 20px;
   }
 
+  .hero-main-line {
+    height: 180px;
+  }
+
   .hero-you {
-    left: 30px;
-    top: 78px;
-    font-size: 82px;
+    left: 40px;
+    top: 74px;
+    font-size: 72px;
   }
 
   .hero-title-group {
-    position: absolute;
-    left: 690px;
-    top: 98px;
-    width: 560px;
-    height: 150px;
+    left: 230px;
+    top: 78px;
+    width: 360px;
+    height: 120px;
+  }
+
+  .hero-fit {
+    left: 0;
+    top: 26px;
+    font-size: 72px;
   }
 
   .hero-ness {
-  position: absolute;
-  left: 170px;
-  top: 0;
-  width: 320px;
-  display: block;
-}
+    left: 125px;
+    top: -8px;
+    width: 210px;
+  }
+
   .hero-into-shape {
-    left: 214px;
-    top: 68px;
+    left: 220px;
+    top: 54px;
     font-size: 18px;
   }
 
   .hero-btn {
-    left: 140px;
-    top: 198px;
+    left: 90px;
+    top: 190px;
     font-size: 15px;
     padding: 12px 24px;
+    gap: 14px;
   }
 
   .hero-badge-weight {
     width: 170px;
-    left: 300px;
+    left: 260px;
     top: 142px;
   }
 
@@ -507,11 +527,13 @@
 
   .hero-wrapper {
     min-height: 700px;
+    width: min(100%, 96%);
   }
 
   .hero-navbar {
     flex-direction: column;
     gap: 14px;
+    padding-top: 16px;
   }
 
   .hero-nav-links {
@@ -579,7 +601,7 @@
   }
 
   .hero-transform {
-    left: 18px;
+    left: 16px;
     top: -8px;
     font-size: 16px;
   }
@@ -589,31 +611,38 @@
   }
 
   .hero-you {
-    left: 15px;
+    left: 12px;
     top: 42px;
-    font-size: 58px;
+    font-size: 42px;
   }
 
   .hero-title-group {
-    left: 158px;
-    top: 76px;
-    width: 190px;
+    left: 120px;
+    top: 58px;
+    width: 210px;
     height: 90px;
   }
 
+  .hero-fit {
+    left: 0;
+    top: 24px;
+    font-size: 40px;
+  }
+
   .hero-ness {
-    width: 152px;
-    left: 74px;
+    width: 130px;
+    left: 62px;
+    top: -2px;
   }
 
   .hero-into-shape {
-    left: 116px;
-    top: 48px;
-    font-size: 12px;
+    left: 102px;
+    top: 44px;
+    font-size: 11px;
   }
 
   .hero-btn {
-    left: 20px;
+    left: 18px;
     top: 148px;
     font-size: 13px;
     padding: 10px 16px;
