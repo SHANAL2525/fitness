@@ -61,8 +61,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="about-right">
-          <p className="about-label">WHAT WE OFFER</p>
+        
 
           <h2 className="about-title">
             <span className="about-title-dark">Build Your Body &</span>
