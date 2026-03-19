@@ -1,4 +1,10 @@
 import { useState } from "react";
+import "../../styles/contact.css";
+
+import contactLogo from "../../assets/contact-logo.png";
+import contactEmail from "../../assets/contact-email.png";
+import contactLocation from "../../assets/contact-location.png";
+import contactPhone from "../../assets/contact-phone.png";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -66,62 +72,102 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="section section--dark">
-      <div className="container contact">
-        <div className="contact-left">
-          <p className="section-subtitle">CONTACT US</p>
-          <h2 className="section-title">Get In Touch With Us</h2>
-          <p className="section-text">
-            Have any questions? Reach out to us and we’ll get back to you as soon
-            as possible.
-          </p>
+    <section id="contact" className="contact-section">
+      <div className="contact-bg-glow contact-glow-top-right"></div>
+      <div className="contact-bg-glow contact-glow-bottom-left"></div>
 
-          <div className="contact-info">
-            <p>📍 531/2 Colombo 05</p>
-            <p>📞 0112345678</p>
-            <p>✉ info@fitnesstrainers.com</p>
+      <div className="contact-container">
+        <div className="contact-box">
+          <div className="contact-logo-wrap">
+            <img src={contactLogo} alt="Fitness Sports Center Logo" className="contact-logo" />
           </div>
-        </div>
 
-        <div className="contact-right">
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div>
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
-                onChange={handleChange}
-              />
-              {errors.name && <p className="form-error">{errors.name}</p>}
+          <div className="contact-left">
+            <p className="contact-label">CONTACT US</p>
+
+            <h2 className="contact-title">
+              Get In Touch
+              <br />
+              With Us
+            </h2>
+
+            <p className="contact-text">
+              Have any Questions ? Reach out to us and we’ll get back to you as
+              soon as possible.
+            </p>
+
+            <div className="contact-info">
+              <p>
+                <span className="contact-icon-wrap">
+                  <img src={contactLocation} alt="Location" className="contact-icon-img" />
+                </span>
+                <span>531/2 Colombo 05</span>
+              </p>
+
+              <p>
+                <span className="contact-icon-wrap">
+                  <img src={contactPhone} alt="Phone" className="contact-icon-img" />
+                </span>
+                <span>0112345678</span>
+              </p>
+
+              <p>
+                <span className="contact-icon-wrap">
+                  <img src={contactEmail} alt="Email" className="contact-icon-img" />
+                </span>
+                <span>info@fitnesstrainers.com</span>
+              </p>
             </div>
+          </div>
 
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              {errors.email && <p className="form-error">{errors.email}</p>}
-            </div>
+          <div className="contact-right">
+            <form className="contact-form" onSubmit={handleSubmit} noValidate>
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={errors.name ? "input-error" : ""}
+                />
+                {errors.name && <p className="form-error">{errors.name}</p>}
+              </div>
 
-            <div>
-              <textarea
-                rows="5"
-                name="message"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
-              {errors.message && <p className="form-error">{errors.message}</p>}
-            </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={errors.email ? "input-error" : ""}
+                />
+                {errors.email && <p className="form-error">{errors.email}</p>}
+              </div>
 
-            {success && <p className="form-success">{success}</p>}
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className={errors.message ? "input-error" : ""}
+                ></textarea>
+                {errors.message && <p className="form-error">{errors.message}</p>}
+              </div>
 
-            <button type="submit">Send Message</button>
-          </form>
+              {success && <p className="form-success">{success}</p>}
+
+              <button type="submit" className="contact-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
