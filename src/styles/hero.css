@@ -635,7 +635,11 @@
     top: 2px;
   }
 
-  
+  .hero-into-shape {
+    left: 140px;
+    top: 44px;
+    font-size: 11px;
+  }
 
   .hero-btn {
     left: 18px;
