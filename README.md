@@ -6,7 +6,7 @@ This project was designed and developed for a local fitness brand launching a ne
 It showcases the gym’s services, membership plans, trainers, and includes a contact form for user inquiries.
 
 ## Live Demo
-[View Live Site](fitness-ten-tau.vercel.app)
+[View Live Site](https://fitness-ten-tau.vercel.app)
 
 ## Figma Design
 [View Figma Design](https://www.figma.com/design/KqzdSr2kMwKC3H7kGmfxG9/Untitled?node-id=0-1&t=bPyPcnC29srVc6Wn-1)
